@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Princess Day My Love 🎂</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap');
+    
+    :root {
+      --pink: #ff7eb9;
+      --dark-pink: #ff4d6d;
+      --light-pink: #ffb3d1;
+      --gold: #ffd700;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: white;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    .page {
+      display: none;
+      padding: 40px 20px;
+      height: 100vh;
+      box-sizing: border-box;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 70%);
+      z-index: -1;
+    }
+
+    .page.active {
+      display: flex;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    img {
+      width: 350px;
+      max-width: 90%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 15px;
+      border: 3px solid var(--light-pink);
+      box-shadow: 0 10px 25px rgba(255, 126, 185, 0.3);
+      margin-bottom: 25px;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 15px 30px rgba(255, 126, 185, 0.5);
+    }
+
+    .btn {
+      background: linear-gradient(45deg, var(--pink), var(--dark-pink));
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      font-size: 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 78, 109, 0.4);
+      font-weight: 600;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+      margin-top: 15px;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 78, 109, 0.6);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+      transform: translateX(-100%);
+      transition: 0.5s;
+    }
+
+    .btn:hover::after {
+      transform: translateX(100%);
+    }
+
+    .typewriter {
+      font-weight: 600;
+      font-size: 24px;
+      max-width: 80%;
+      text-align: center;
+      margin-bottom: 30px;
+      color: var(--light-pink);
+      text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 80%;
+      margin: 20px auto;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+      border-left: 3px solid var(--pink);
+      animation: textGlow 3s infinite alternate;
+    }
+
+    @keyframes textGlow {
+      from { box-shadow: 0 0 5px rgba(255, 126, 185, 0.3); }
+      to { box-shadow: 0 0 15px rgba(255, 126, 185, 0.6); }
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 42px;
+      color: var(--gold);
+      margin-bottom: 20px;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    /* Heart animations */
+    .heart {
+      position: fixed;
+      top: -50px;
+      color: var(--pink);
+      animation: fall linear infinite;
+      font-size: 20px;
+      opacity: 0.8;
+      z-index: 100;
+      text-shadow: 0 0 10px rgba(255, 126, 185, 0.7);
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg) scale(0.5);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.8;
+        transform: scale(1);
+      }
+      90% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg) scale(0.5);
+        opacity: 0;
+      }
+    }
+
+    /* Floating sparkles */
+    .sparkle {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: white;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: sparkle 2s infinite;
+    }
+
+    @keyframes sparkle {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(0); opacity: 0; }
+    }
+
+    /* Page specific decorations */
+    .page:nth-child(odd)::before {
+      background: radial-gradient(circle at 20% 30%, rgba(255,126,185,0.1) 0%, transparent 50%);
+    }
+
+    .page:nth-child(even)::before {
+      background: radial-gradient(circle at 80% 70%, rgba(255,215,0,0.1) 0%, transparent 50%);
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .typewriter {
+        font-size: 20px;
+      }
+      
+      p {
+        font-size: 16px;
+        max-width: 90%;
+      }
+      
+      h1 {
+        font-size: 32px;
+      }
+      
+      .btn {
+        padding: 12px 24px;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .typewriter {
+        font-size: 18px;
+      }
+      
+      p {
+        font-size: 14px;
+      }
+      
+      h1 {
+        font-size: 28px;
+      }
+    }
+
+    /* Special last page styles */
+    .page:last-child {
+      background: radial-gradient(circle at center, rgba(255,126,185,0.2) 0%, transparent 70%);
+    }
+
+    .page:last-child p {
+      font-size: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Music player indicator */
+    .music-control {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1000;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .music-control:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+
+    .music-control i {
+      color: white;
+      font-size: 18px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="https://raw.githubusercontent.com/kakashuuu/Html/master/y2mate.com%20-%20Line%20without%20a%20hook%20AMV%20edit%20weathering%20with%20you%20(alight%20motion).mp3" type="audio/mpeg">
+</audio>
+
+<div class="music-control" onclick="toggleMusic()">
+  <i class="fas fa-music"></i>
+</div>
+
+<!-- PAGE 1 -->
+<div class="page active">
+  <img src="https://raw.githubusercontent.com/KakashiSan69/hello/refs/heads/master/ac8b09dd27fa2f0bfd9c27da09bd13ef.jpg">
+  <div class="typewriter" id="text1"></div>
+  <button class="btn" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <img src="https://raw.githubusercontent.com/KakashiSan69/hello/refs/heads/master/16e5bd2598578badd26e90d5491967c2.jpg">
+  <p><strong>I met you in a BTS group... never knew that one message would change my life. I told you not to talk to boys, but you made me fall instead 💌</strong></p>
+  <button class="btn" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+  <img src="https://raw.githubusercontent.com/KakashiSan69/hello/refs/heads/master/22a0196f69777cfd7d92b7bbe64eeb71.jpg">
+  <p><strong>You were serious about me... but I was confused. Still, you stayed, loved me more. Slowly I realized – you were the one 🥺</strong></p>
+  <button class="btn" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+  <img src="https://raw.githubusercontent.com/KakashiSan69/hello/refs/heads/master/a8f4cbe0c0420fb5d0b38ba8701b5ffd.jpg">
+  <p><strong>You stood by me – financially, emotionally, mentally – like no one else ever did. You gave when I had nothing. You never left.</strong></p>
+  <button class="btn" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt9BMA5mviodF4cgA4fd683lMUk6MSOtxRbQvZ2zLMoWEm22AFGLAo6RY&s=10">
+  <p><strong>Yes, we fought. Yes, we broke. But somehow, we always came back. That's real love. That's us 💖</strong></p>
+  <button class="btn" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page">
+  <img src="https://ibb.co/FkcPJRXL">
+  <p><strong>You're an overthinker. I'm a logical nerd. You're a topper. I'm a coder. Still – we blend like the perfect anime pair 🌸</strong></p>
+  <button class="btn" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page">
+  <img src="https://ibb.co/Y761XZV4">
+  <p><strong>No matter how dark things get... you've always been my light. My Sakura. My best girl. My angel in chaos ☁️</strong></p>
+  <button class="btn" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page">
+  <img src="https://ibb.co/FkcPJRXL">
+  <p><strong>I never made any site or surprise for anyone before. But you? You deserve it all. Every line, every moment – is for you only.</strong></p>
+  <button class="btn" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
+</div>
+
+<!-- PAGE 9 -->
+<div class="page">
+  <h1>Bhanu ❤️ Janvi</h1>
+  <p>You're my forever. My end game. Happy Princess day my lifeline 🌹</p>
+  <button class="btn" onclick="showMessage('Forever yours – Bhanu 🐺')">
+    <i class="fas fa-heart"></i> Tap Me <i class="fas fa-heart"></i>
+  </button>
+</div>
+
+<script>
+  const pages = document.querySelectorAll(".page");
+  let currentPage = 0;
+  const music = document.getElementById("bgMusic");
+  let musicPlaying = false;
+
+  // Try to play music on user interaction
+  document.body.addEventListener('click', () => {
+    if (!musicPlaying) {
+      music.play().then(() => {
+        musicPlaying = true;
+        document.querySelector('.music-control i').classList.add('fa-volume-up');
+        document.querySelector('.music-control i').classList.remove('fa-music');
+      }).catch(e => console.log(e));
+    }
+  }, { once: true });
+
+  function toggleMusic() {
+    if (music.paused) {
+      music.play();
+      document.querySelector('.music-control i').classList.add('fa-volume-up');
+      document.querySelector('.music-control i').classList.remove('fa-music');
+      musicPlaying = true;
+    } else {
+      music.pause();
+      document.querySelector('.music-control i').classList.remove('fa-volume-up');
+      document.querySelector('.music-control i').classList.add('fa-music');
+      musicPlaying = false;
+    }
+  }
+
+  function nextPage() {
+    pages[currentPage].classList.remove("active");
+    currentPage = (currentPage + 1) % pages.length;
+    pages[currentPage].classList.add("active");
+    
+    // Add sparkles on page change
+    createSparkles(10);
+  }
+
+  function showMessage(msg) {
+    createSparkles(20);
+    setTimeout(() => {
+      alert(msg);
+    }, 500);
+  }
+
+  const text = "Yoo Darling Aa Gayi Tum ✨🍀 Press 👇";
+  let i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById("text1").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 70);
+    }
+  }
+  typeWriter();
+
+  function createHearts() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = ["❤️", "💖", "💗", "💓", "💞"][Math.floor(Math.random() * 5)];
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 5) + "s";
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 8000);
+  }
+
+  function createSparkles(count) {
+    for (let i = 0; i < count; i++) {
+      const sparkle = document.createElement("div");
+      sparkle.className = "sparkle";
+      sparkle.style.left = Math.random() * 100 + "vw";
+      sparkle.style.top = Math.random() * 100 + "vh";
+      sparkle.style.animationDelay = Math.random() + "s";
+      sparkle.style.width = sparkle.style.height = (Math.random() * 5 + 3) + "px";
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 2000);
+    }
+  }
+
+  // Create initial hearts
+  setInterval(createHearts, 300);
+  
+  // Create occasional sparkles
+  setInterval(() => createSparkles(3), 1000);
+</script>
+
+</body>
+</html>
