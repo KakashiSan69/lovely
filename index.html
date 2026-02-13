@@ -284,11 +284,13 @@ setInterval(() => {
 
 /* AUTOPLAY SOUND TRICK */
 const music = document.getElementById('bgMusic');
-document.body.addEventListener('click', () => {
-  music.muted = false;
-  music.play();
-}, { once: true });
-</script>
 
-</body>
-</html>
+function startMusic() {
+  music.muted = false;
+  music.volume = 1;
+  music.play();
+}
+
+document.addEventListener('click', startMusic, { once: true });
+document.addEventListener('touchstart', startMusic, { once: true });
+
