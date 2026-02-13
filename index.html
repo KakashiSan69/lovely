@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Happy Valentine My Love ❤️</title>
+<title>For My Love ❤️</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -26,12 +26,12 @@ body {
   display: none;
   min-height: 100dvh;
   width: 100vw;
-  padding: 28px 18px;
+  padding: 30px 20px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  animation: fade 0.5s ease;
+  animation: fade 0.6s ease;
 }
 
 .page.active {
@@ -39,35 +39,34 @@ body {
 }
 
 @keyframes fade {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ✅ IMAGE NO CROP FIX */
 img {
-  width: 90vw;
-  max-width: 360px;
+  width: 92vw;
+  max-width: 370px;
   max-height: 52vh;
   object-fit: contain;
-  border-radius: 18px;
-  margin-bottom: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  border-radius: 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 p {
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.6;
   background: rgba(255,255,255,0.12);
-  padding: 16px;
-  border-radius: 16px;
-  max-width: 92%;
+  padding: 18px;
+  border-radius: 18px;
+  max-width: 95%;
 }
 
 h1 {
   font-family: 'Dancing Script', cursive;
-  font-size: 34px;
+  font-size: 36px;
   color: #ffd700;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .btn {
@@ -98,60 +97,126 @@ h1 {
 
 <body>
 
+<audio id="bgMusic" autoplay loop muted>
+  <source src="https://raw.githubusercontent.com/kakashuuu/Html/master/y2mate.com%20-%20Line%20without%20a%20hook%20AMV%20edit%20weathering%20with%20you%20(alight%20motion).mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
 <div class="page active">
   <img src="https://i.imgur.com/rFDQbYN.jpeg">
-  <p><strong>Happy Valentine’s Day meri jaan ❤️</strong><br><br>
-  Tu meri life ka sabse beautiful part hai 🥺</p>
+  <p>
+  <strong>Happy Valentine’s Day meri jaan ❤️</strong><br><br>
+
+  Shayad ye sirf ek simple website lage… but mere liye ye kuch aur hi hai.  
+  Ye har line, har second, har emotion — sirf tere liye hai.
+
+  Tu meri life ka wo hissa hai jise explain karna mushkil hai,  
+  par feel karna bohot easy… kyunki jab bhi tera khayal aata hai,  
+  dil automatically smile kar deta hai.
+
+  Tu meri habit nahi hai… tu meri peace hai.  
+  Tu meri choice nahi hai… tu meri feeling hai.  
+  Aur sabse important — tu meri hai 😌
+  </p>
+
   <button class="btn" onclick="next()">Next 💘</button>
 </div>
 
+<!-- PAGE 2 -->
 <div class="page">
   <img src="https://i.imgur.com/0Rm0o94.jpeg">
-  <p><strong>Pehli baar jab tujhe dekha…</strong><br><br>
-  Tabhi kuch alag sa feel hua ✨</p>
+  <p>
+  Pehli baar jab maine tujhe dekha tha na…  
+  tab kuch dramatic nahi hua, koi background music nahi chala…
+
+  Bas ek ajeeb sa calm feel hua — jaise dil quietly decide kar chuka ho  
+  ki ye ladki alag hai.
+
+  Aaj sochta hu… kitni normal si beginning thi,  
+  par kitni extraordinary story ban gayi 🥺
+  </p>
   <button class="btn" onclick="next()">Next 💘</button>
 </div>
 
+<!-- PAGE 3 -->
 <div class="page">
   <img src="https://i.imgur.com/Yycb4Th.jpeg">
-  <p><strong>Tu meri favourite distraction hai 😌</strong><br><br>
-  Dimag disturb, dil happy.</p>
+  <p>
+  Tu meri favourite distraction hai.  
+  Jab tu hoti hai to dimag ka noise band ho jata hai.
+
+  Gussa bhi cute lagta hai tera, drama bhi adorable,  
+  aur overthinking to tera signature move hai 😌
+
+  But sach bolu — tu jaise bhi hai, perfect hai mere liye.
+  </p>
   <button class="btn" onclick="next()">Next 💘</button>
 </div>
 
+<!-- PAGE 4 -->
 <div class="page">
   <img src="https://i.imgur.com/aO9iKyf.jpeg">
-  <p><strong>Jab meri tabiyat kharab hoti hai…</strong><br><br>
-  Tu mujhse zyada tension leti hai 🥺</p>
+  <p>
+  Jab meri tabiyat kharab hoti hai, tu tension leti hai…  
+  Aur mujhe us moment me ek hi thought aata hai —
+
+  Itni care koi casually nahi karta.
+
+  Tu sirf meri girlfriend nahi…  
+  tu meri safe place hai 🥺
+  </p>
   <button class="btn" onclick="next()">Next 💘</button>
 </div>
 
+<!-- PAGE 5 -->
 <div class="page">
   <img src="https://i.imgur.com/XhYoXN2.jpeg">
-  <p><strong>Meri chotu si bacchi 💕</strong><br><br>
-  Cute + Drama + Overthinking Queen.</p>
+  <p>
+  Meri chotu si bacchi 💕  
+  Kabhi stubborn, kabhi emotional, kabhi extra cute…
+
+  Par ek cheez constant hai —  
+  Tu meri life ko bohot beautiful bana deti hai.
+  </p>
   <button class="btn" onclick="next()">Next 💘</button>
 </div>
 
+<!-- PAGE 6 -->
 <div class="page">
   <img src="https://i.imgur.com/AkeWrM6.jpeg">
-  <p><strong>Tu aadat nahi…</strong><br><br>
-  Tu meri zaroorat ban chuki hai.</p>
+  <p>
+  Tu aadat nahi hai…  
+  Tu wo insaan hai jiske bina sab incomplete lagta hai.
+
+  Aur ye koi filmy dialogue nahi —  
+  ye mera daily reality hai.
+  </p>
   <button class="btn" onclick="next()">Next 💘</button>
 </div>
 
+<!-- PAGE 7 -->
 <div class="page">
   <img src="https://i.imgur.com/RSxPYtO.jpeg">
-  <p><strong>Future simple hai 😌</strong><br><br>
-  Tu + Main = Forever 💘</p>
+  <p>
+  Future complicated nahi hai.  
+  Bas tu saath rehna.
+
+  Baaki fights bhi manage ho jayengi,  
+  problems bhi solve ho jayengi,  
+  aur life bhi perfect ho jayegi 😌
+  </p>
   <button class="btn" onclick="next()">Next 💘</button>
 </div>
 
+<!-- PAGE 8 -->
 <div class="page">
   <img src="https://i.imgur.com/gnaTwRO.jpeg">
   <h1>Bhanu ❤️ Janvi</h1>
-  <p>Forever wali love story baby 🌙</p>
-  <button class="btn" onclick="alert('I Love You Always ❤️')">Tap Me 💖</button>
+  <p>
+  Forever wali love story baby 🌙  
+  Temporary feelings wala scene nahi hai ye.
+  </p>
+  <button class="btn" onclick="alert('Forever Yours ❤️')">Tap Me 💖</button>
 </div>
 
 <script>
@@ -165,6 +230,7 @@ function next() {
   pages[index].classList.add('active');
 }
 
+/* HEART RAIN */
 setInterval(() => {
   const heart = document.createElement('div');
   heart.className = 'heart';
@@ -174,6 +240,13 @@ setInterval(() => {
   document.body.appendChild(heart);
   setTimeout(() => heart.remove(), 4000);
 }, 250);
+
+/* AUTOPLAY SOUND TRICK */
+const music = document.getElementById('bgMusic');
+document.body.addEventListener('click', () => {
+  music.muted = false;
+  music.play();
+}, { once: true });
 </script>
 
 </body>
